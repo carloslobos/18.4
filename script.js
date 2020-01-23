@@ -34,7 +34,7 @@ var Movie = React.createClass({
     render: function() {
         return (
             React.createElement('li', { key: this.props.movie.id },
-                React.createElement('img', { src: this.props.movie.poster })
+                React.createElement('img', { src: this.props.movie.poster }),
             )
         )
     }
@@ -46,7 +46,7 @@ var MovieTitle = React.createClass({
     },
     render: function() {
         return (
-            React.createElement('h2', {}, this.props.movie.title)
+            React.createElement('h2', { title: '' }, this.props.movie.title)
         )
     }
 });
@@ -57,7 +57,7 @@ var MovieDescription = React.createClass({
     },
     render: function() {
         return (
-            React.createElement('{p', {}, this.props.movie.desc)
+            React.createElement('p', { desc: '' }, this.props.movie.desc)
         )
     }
 });
